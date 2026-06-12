@@ -72,7 +72,11 @@ def health() -> dict[str, str]:
 
 class _SPAStaticFiles(StaticFiles):
     """Serve the built frontend; unknown paths fall back to index.html so
-    client-side routes (/app/week, /login, ...) survive a hard refresh."""
+    client-side routes (/app/week, /login, ...) survive a hard refresh.
+
+    index.html is served with no-cache so every visit picks up the latest
+    deploy; hashed /assets/* files are immutable and cache for a year.
+    """
 
     async def get_response(self, path: str, scope):  # type: ignore[override]
         # API/static misses must stay JSON 404s, not index.html.
@@ -81,10 +85,19 @@ class _SPAStaticFiles(StaticFiles):
             response = await super().get_response(path, scope)
         except StarletteHTTPException as exc:
             if exc.status_code == 404 and spa_fallback:
-                return await super().get_response("index.html", scope)
-            raise
-        if response.status_code == 404 and spa_fallback:
-            response = await super().get_response("index.html", scope)
+                response = await super().get_response("index.html", scope)
+                path = "index.html"
+            else:
+                raise
+        else:
+            if response.status_code == 404 and spa_fallback:
+                response = await super().get_response("index.html", scope)
+                path = "index.html"
+
+        if path in ("index.html", "", "."):
+            response.headers["Cache-Control"] = "no-cache"
+        elif path.startswith("assets/"):
+            response.headers["Cache-Control"] = "public, max-age=31536000, immutable"
         return response
 
 

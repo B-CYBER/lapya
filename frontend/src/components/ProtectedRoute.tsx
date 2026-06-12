@@ -35,6 +35,16 @@ export function ProtectedRoute({ children, requiredRole }: ProtectedRouteProps) 
     return <Navigate to="/onboarding" replace />;
   }
 
+  // Onboarded but unverified: hold at the code screen until the OTP is entered.
+  if (
+    user &&
+    user.onboardingCompletedAt &&
+    !user.isEmailVerified &&
+    !ONBOARDING_BYPASS_PATHS.has(location.pathname)
+  ) {
+    return <Navigate to="/verify-email" replace />;
+  }
+
   if (requiredRole && user?.role !== requiredRole) {
     return <Navigate to="/app" replace />;
   }

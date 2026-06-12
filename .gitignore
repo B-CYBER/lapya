@@ -23,7 +23,7 @@ node_modules/
 dist/
 build/
 .vite/
-
+.vscode/
 # Nigerian corpus — keep the small xlsx (source for the recipe importer),
 # ignore the bulky raw download, source photos, and unparsed .docx guides.
 # The shipped/compressed photos live in backend/static/recipe-images/ (tracked).

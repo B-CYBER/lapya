@@ -49,29 +49,3 @@ yarn dev
 ```
 
 App runs at <http://localhost:5173>. The dev server proxies `/api/*` to the backend.
-
-## Phase 1 status — Scaffold + Auth
-
-What works:
-
-- Signup, login, logout, session rehydration via JWT.
-- Protected routes via `/app/*`.
-- Forgot-password and email-verification screens (stubbed — see launch blockers).
-- All 30+ Figma prototype screens render unchanged; only auth screens are wired to the API. The rest are wired to APIs in later phases.
-
-### Launch blockers — DO NOT ship to real users until these land
-
-- **Email verification** — currently accepts any 6-digit OTP. Needs real email sending (Resend / SES / SMTP).
-- **Password reset** — token is logged to stdout. Needs real email.
-- **Dietitian self-selection (Phase 2)** — anyone can pick the dietitian role in onboarding. Admin must verify via `dietitian_verified` before that role grants access to patient data.
-- **Payments (Phase 5)** — stub provider. Needs Paystack integration (₦ pricing).
-
-## Build phases
-
-Phases 1 → 5 per `LAPYA_PROJECT_CONTEXT.md`. We plan each phase in depth before starting it.
-
-- **Phase 1 — Scaffold + Auth** (in progress / done — see above)
-- **Phase 2 — Onboarding** (4-screen wizard, conditions + severity, food prefs)
-- **Phase 3 — Core screens** (Home, meal plan, scanner, grocery — multi-condition safety analysis)
-- **Phase 4 — Health & social** (metrics, caregivers, Claude-powered nutrition chatbot)
-- **Phase 5 — Settings / payments / dietitian portal / landing**
