@@ -1,0 +1,145 @@
+The Lapya web app currently stretches all content to the full browser width.
+This makes inputs, cards, and lists feel sparse, lost in white space, and
+"AI-generated." Fix this across the entire app using strict max-width
+containers and proper responsive scaling.
+
+═══════════════════════════════════════════════════════════════
+GLOBAL LAYOUT RULES — apply to EVERY page
+═══════════════════════════════════════════════════════════════
+
+CONTAINER SYSTEM:
+
+1. Outer page wrapper: full width, warm white background (#FBFAF7)
+
+2. Inner content container with these strict max-widths by context:
+   • Auth screens (sign up, sign in, onboarding):  max-width 440px, centered
+   • Forms and input-heavy screens:                max-width 520px, centered
+   • Reading/content pages (meal plan, care circle, profile, history):
+                                                    max-width 720px, centered
+   • Dashboard / multi-column views (dietitian, home with sidebars):
+                                                    max-width 1120px, centered
+   • Marketing/landing page sections:              max-width 1200px, centered
+
+3. Horizontal padding on the inner container:
+   • Mobile (<640px):     16px
+   • Tablet (640-1024px): 24px
+   • Desktop (>1024px):   32px
+
+4. Vertical section spacing:
+   • Between major sections: 64px desktop, 48px tablet, 32px mobile
+   • Between cards in a list: 16px on all viewports
+
+═══════════════════════════════════════════════════════════════
+SPECIFIC FIXES BY SCREEN
+═══════════════════════════════════════════════════════════════
+
+FIX 1 — SIGN UP / SIGN IN / AUTH SCREENS
+The current sign-up form stretches First Name and Last Name inputs across
+the full viewport. Fix:
+• Wrap the whole form in a 440px max-width container, centered on the page
+• First Name and Last Name should sit side-by-side in a 2-column grid that
+  fits inside the 440px container (each input ~210px wide with 16px gap)
+• Email, Password inputs: full-width WITHIN the 440px container
+• Submit button: full-width WITHIN the 440px container
+• Below 640px viewport, First/Last Name stack vertically
+• Add a soft white card surface (24px radius, very soft Navy-tinted shadow,
+  32px padding) AROUND the form so it feels like a confident object on the
+  warm white background, not a loose collection of inputs
+• The LP logo sits above the card, centered
+
+FIX 2 — MEAL PLAN PAGE (the long list of meal cards)
+The current meal cards stretch the full viewport. Fix:
+• Wrap the meal list in a 720px max-width container, centered
+• Each meal card stays within this 720px
+• Reduce card horizontal padding to 20px (currently feels too generous)
+• Increase card thumbnail image from looking small inside a too-wide card
+  to feeling proportional — image at 96-112px square works inside 720px
+• Card content sits comfortably next to the image, not floating in space
+• Below 640px viewport, container drops to 100% width with 16px side padding
+
+FIX 3 — CARE CIRCLE PAGE
+The current Care Circle cards stretch full viewport. Fix:
+• Wrap the list in a 720px max-width container, centered
+• Each member card stays within 720px
+• The member's avatar (96px) + name + role chip + phone should sit in a
+  comfortable 2-column layout inside the card (avatar left, info right)
+• Reduce vertical padding inside cards by 25% — they currently feel too
+  spacious
+• Below 640px, container is 100% width with 16px side padding
+
+FIX 4 — TOP NAVIGATION
+The current top nav has the logo flush-left and "Ask AI" + notification +
+avatar flush-right with huge empty space between them. Fix:
+• Wrap the top nav contents in a 1120px max-width container, centered
+• The container has padding 24px on desktop, 16px on mobile
+• Logo on far left of container, nav links centered, action buttons (Ask AI,
+  bell, avatar) on far right of container
+• Below 640px viewport, hide the center nav links and show a hamburger menu
+  on the right; logo stays left
+
+═══════════════════════════════════════════════════════════════
+RESPONSIVE BREAKPOINTS — apply globally
+═══════════════════════════════════════════════════════════════
+
+Generate every screen at these 3 widths to verify responsiveness:
+
+1. Mobile portrait:  390px wide (iPhone 14 Pro)
+2. Tablet:           768px wide (iPad)
+3. Desktop:          1280px wide (standard laptop)
+
+Behavior at each breakpoint:
+
+• 390px:  All inputs/cards full width inside 16px side padding.
+          Top nav: hamburger menu. Bottom tab bar visible.
+          Side-by-side fields stack vertically.
+
+• 768px:  Containers respect max-widths above.
+          Side-by-side fields visible side-by-side.
+          Top nav shows links inline.
+
+• 1280px: Same as 768 but containers reach their max-width caps.
+          NEVER allow content to exceed the max-width even on huge screens.
+          Excess viewport space becomes warm white margin on both sides —
+          this is intentional, premium, editorial.
+
+═══════════════════════════════════════════════════════════════
+CONTEXTUAL VISUAL TREATMENTS — to avoid empty-space feeling
+═══════════════════════════════════════════════════════════════
+
+Now that content is properly contained, the warm white space around it
+might still feel empty. Add THESE optional treatments only where helpful:
+
+1. SUBTLE BACKGROUND TEXTURE on auth and onboarding screens:
+   A very low-opacity (5-8%) blueberry pattern OR a faint Periwinkle
+   gradient blob in the top-right and bottom-left corners. Keep it
+   editorial — never overpowering.
+
+2. SIDE ACCENT ELEMENTS on wide reading pages (meal plan, care circle):
+   On desktop only (>1024px), show small accent elements in the side
+   margins next to the centered container:
+   • Top-right: a small Marigold pill "Day 4 of 7" (or similar context label)
+   • Bottom-left: a thin Periwinkle vertical rule
+
+3. SECTION DIVIDER FLOURISHES between major content blocks:
+   A thin Marigold horizontal rule, 80px wide, centered, with 32px space
+   above and below — breaks up vertical monotony without filling space.
+
+═══════════════════════════════════════════════════════════════
+ANTI-VIBECODED VERIFICATION
+═══════════════════════════════════════════════════════════════
+
+Before delivering, verify:
+
+☐ NO input field is wider than 520px on any screen
+☐ NO card is wider than 720px on any reading page
+☐ NO content stretches to the full browser width on desktop
+☐ Side margins are always at least 16px on mobile, 32px on desktop
+☐ When viewport > 1280px, content stays capped and side margins grow as
+  warm white breathing room
+☐ First Name + Last Name sit side-by-side on tablet/desktop, stack on mobile
+☐ Auth form has a card surface wrapping it, with shadow and radius
+☐ Every screen looks composed and confident at ALL 3 breakpoints (390,
+  768, 1280)
+
+Re-deliver all affected screens (Sign Up, Sign In, Onboarding, Home, Meal
+Plan, Care Circle, Profile, Consult flow) at the 3 breakpoints.

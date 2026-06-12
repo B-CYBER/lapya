@@ -1,0 +1,393 @@
+Design the LAPYA.APP marketing landing page. Reference the Lapya design
+system already established (blueberry-led palette — Blueberry Navy #1E2A5E,
+Blueberry Cobalt #3D6BE5, Periwinkle #A8BCF0, Marigold #E8A92E, Butter
+Yellow #F4D27A, Warm White #FBFAF7. Fraunces for display, Sora for headings,
+Inter for body. Editorial-quality high-resolution photography only.).
+
+═══════════════════════════════════════════════════════════════
+DESIGN INTENT — read twice
+═══════════════════════════════════════════════════════════════
+
+This is NOT a typical SaaS landing page. We are building something that
+looks like the digital cover of a premium wellness magazine that happens
+to also be a product.
+
+The page must FEEL like:
+- A New York Times Magazine feature about food and health
+- Crossed with the editorial polish of Headspace or Calm
+- With the cultural warmth of an African Vogue cover
+- Anchored by the clinical credibility of Mayo Clinic
+
+It must NOT feel like:
+- A vibecoded centered-hero one-button page
+- A Bootstrap template with a gradient blob
+- A generic AI-design with three identical icon cards
+- A fitness app with neon colors
+
+═══════════════════════════════════════════════════════════════
+LAYOUT PHILOSOPHY
+═══════════════════════════════════════════════════════════════
+
+- ASYMMETRY over symmetry. Break the grid in 3-4 places intentionally.
+- EDITORIAL RHYTHM: alternate dark Navy sections with warm white sections
+  with full-bleed photo sections — no two adjacent sections look the same.
+- MAGAZINE COLUMN WIDTHS: vary between 12-col, 8-col, and 6-col layouts
+  per section. Never lock to a single grid.
+- WHITESPACE is the luxury. Use 120-160px section padding on desktop.
+- TYPOGRAPHY HIERARCHY: at least 3 size jumps per section (display →
+  pull-quote → body).
+- A subtle "issue / chapter" feel — small uppercase eyebrow labels above
+  each major section, like a magazine ("CHAPTER 01 — THE PROBLEM").
+- Tiny editorial flourishes: numbered captions under images
+  ("01 / Mama Nkechi, 52, Enugu"), small drop caps on opening paragraphs,
+  thin Marigold horizontal rules between sections.
+
+═══════════════════════════════════════════════════════════════
+DELIVER 3 BREAKPOINTS
+═══════════════════════════════════════════════════════════════
+
+1. Desktop (1440px wide) — primary canvas
+2. Tablet (768px) — adapt the asymmetry intentionally, don't just stack
+3. Mobile (390px) — full single column, but preserve editorial feel
+
+═══════════════════════════════════════════════════════════════
+SECTION-BY-SECTION BRIEF
+═══════════════════════════════════════════════════════════════
+
+──────────── 1. NAVIGATION (sticky top) ────────────
+- Warm white background, scrolls into Navy on dark sections
+- Left: Lapya logo (blueberry-with-LP mark, small) + wordmark in Sora 700
+- Center: nav links in Inter 500, 15px, Navy:
+  "Why Lapya" · "How it works" · "Pricing" · "For dietitians" · "Stories"
+- Right: secondary text link "Sign in" + primary pill button "Get the app"
+  in Cobalt
+- Subtle navy-tinted shadow appears on scroll
+- Mobile: hamburger that opens a Navy full-screen menu sheet with
+  Butter Yellow links in Fraunces
+
+──────────── 2. HERO — asymmetric editorial split ────────────
+NOT a centered hero. Build this as a magazine cover:
+
+- Background: Warm White
+- LEFT (60% of width on desktop, 7-col): editorial typography
+  - Tiny uppercase eyebrow in Cobalt, letterspaced: "ISSUE 01 — FOR EVERY
+    BODY"
+  - Massive display headline in Fraunces 600, 96px on desktop, Navy:
+    "Eat well, even with everything."
+  - The word "everything" is in Marigold (#E8A92E) italic Fraunces — that
+    one word does the visual heavy lift
+  - Below in Inter 400 19px, secondary text, max-width 480px:
+    "Lapya is the first AI dietitian built for Africans living with
+    diabetes, blood pressure, kidney disease — often all at once. In the
+    foods you actually cook. In the measures you actually use."
+  - 32px spacer
+  - Two CTAs side by side:
+    Primary Cobalt pill "Start your meal plan — free" with right arrow
+    Secondary text link with underline animation "Watch the 90-second story"
+    preceded by a small play icon
+  - Below CTAs, a thin row of social proof in 13px secondary:
+    "Trusted by dietitians at LUTH, UCH Ibadan and Reddington" with three
+    tiny grayscale hospital logos
+
+- RIGHT (40%, 5-col): a single editorial photograph
+  - Vertical portrait orientation, full bleed to the right edge of viewport
+  - HIGH-RESOLUTION photograph of a Nigerian woman in her 50s, hijab
+    optional, sitting at a wooden kitchen table, hands wrapped around a
+    warm clay bowl of egusi soup with eba, soft window light from the
+    left, eyes looking off-camera, dignified candid expression
+  - The photo extends from the top of the viewport down past the fold
+  - Small numbered caption bottom-left over a slight Navy gradient:
+    "01 / Mama Nkechi, 52 — Diabetic and hypertensive. She uses Lapya."
+
+- A small floating Periwinkle pill bottom-left of the photo with a tiny
+  Marigold star: "App of the Month — Technovation 2026 finalist"
+  (only include if true after submission)
+
+──────────── 3. THE PROBLEM (Navy section) ────────────
+Full-bleed Blueberry Navy background.
+
+- Top: small uppercase Butter Yellow eyebrow "CHAPTER 01 — THE PROBLEM"
+- Massive display pull quote in Fraunces 600, 64px, Butter Yellow, with a
+  large opening quotation mark in Marigold:
+    "The doctor said brown rice. My pastor said no carbs. The WhatsApp
+    aunty said only beans. I just want to know what to cook for dinner."
+- Attribution below in Inter 14px Periwinkle:
+    "— Aisha, 47, Type 2 diabetes + hypertension. Interview, Lagos,
+    April 2026."
+- 80px spacer
+- Below the quote, a three-stat row but NOT in equal columns — make
+  them asymmetric and varied. Each stat:
+  - A massive number in Fraunces 600, 96px, Butter Yellow (e.g. "27M")
+  - A 1-line label in Sora 700 18px, Periwinkle
+  - A 2-line context sentence in Inter 14px, Periwinkle
+  - A tiny citation link in Marigold uppercase 11px: "IDF ATLAS 2025 →"
+
+  Stat 1: "27M" / "Nigerians live with diabetes, hypertension, or CKD" /
+    "And 38% of them have at least two of these conditions at once,
+    creating conflicting diet rules." / source: PMC 2023
+  Stat 2: "1,175" / "Registered dietitians for a country of 230 million" /
+    "That's 0.5 per 100,000 people. The WHO recommends 6." /
+    source: ICDA 2024
+  Stat 3: "0" / "Apps that solve multi-morbidity diets in African foods" /
+    "Until now. We checked." /
+    no source — make this a confident statement
+
+- Position the three stats in a deliberately non-uniform grid: Stat 1
+  larger and left-aligned at 7-col, Stat 2 smaller at 4-col offset right,
+  Stat 3 full-width at the bottom in a thin Marigold-bordered card
+
+──────────── 4. THE PRODUCT (warm white, image-led) ────────────
+This is where the magic of Lapya gets shown, not told.
+
+- Top eyebrow Cobalt uppercase "CHAPTER 02 — THE PRODUCT"
+- Display headline in Fraunces 600, 64px, Navy, max-width 720px:
+    "One AI brain. Three ways to use it."
+- Below, asymmetric 3-row product showcase. Each row alternates left/right:
+
+  ROW 1 (image LEFT, text RIGHT):
+  - Image: high-resolution mockup of the Lapya home screen on an iPhone,
+    held at a casual angle by a Nigerian woman's hand, soft morning kitchen
+    light in background, slightly out of focus. NOT a sterile floating
+    mockup.
+  - Text right:
+    - Small Cobalt eyebrow "FEATURE 01"
+    - H3 in Sora 700, 32px, Navy: "Your week, planned around your body."
+    - Body Inter 16px secondary, max-width 440px:
+      "Lapya generates a 7-day meal plan that respects all your conditions
+      at once — diabetes, blood pressure, kidney health — using foods you
+      already cook. Egusi. Jollof. Brown rice. Plantain. Measured in cigar
+      cups and mudus, not grams."
+    - Small text link Cobalt with arrow: "See how the AI handles
+      multi-morbidity →"
+
+  ROW 2 (text LEFT, image RIGHT — flipped):
+  - Text:
+    - Eyebrow "FEATURE 02"
+    - H3: "Scan any plate. Know in 2 seconds."
+    - Body: "Point your phone at jollof rice or egusi and Lapya tells you
+      portion, calories, sodium, potassium — and whether to eat all, half,
+      or skip it tonight. Built on the West African Food Composition Table.
+      Not USDA. Not guessing."
+    - Link: "Watch the scanner in action →"
+  - Image: a high-resolution photo of a hand holding a phone over a plate
+    of egusi + eba, the phone screen showing the scanner overlay with
+    Cobalt brackets and a Marigold "94% sure" badge. Camera angle slightly
+    overhead, warm lighting, real plate, real soup.
+
+  ROW 3 (image LEFT, text RIGHT):
+  - Image: a beautiful editorial photograph of two phones side by side on
+    a wooden surface — one showing the patient's meal plan, one showing
+    the caregiver's view. Subtle Periwinkle linen napkin underneath. Tiny
+    blueberries scattered for visual rhythm.
+  - Text:
+    - Eyebrow "FEATURE 03"
+    - H3: "She's in Enugu. You're in Lagos. Lapya keeps you both calm."
+    - Body: "Invite a daughter, son, or spouse to share the meal plan.
+      They see what's cooking. They see what's missed. They can send a
+      check-in with one tap. Distance becomes care, not anxiety."
+    - Link: "Set up your care circle →"
+
+──────────── 5. THE SCIENCE STRIP (thin Marigold-edged band) ────────────
+A horizontal band, warm white, with a single Marigold thin rule above
+and below.
+
+- Layout: 4 small cards in a row, each with a tiny duotone icon and a
+  one-line claim, plus a "source →" link in 11px uppercase Marigold
+
+  • "Built with Nigerian dietitians" → ICDA-registered partners
+  • "Nutrition data from FAO + USDA" → West African Food Composition Table
+  • "Multi-morbidity logic clinically reviewed" → reviewed by Dr. [Name],
+    LUTH
+  • "Your data stays in Nigeria" → Hosted on local NDPR-compliant servers
+
+The strip exists to silently raise credibility. No headline above it. It
+just sits there, doing its job.
+
+──────────── 6. A REAL STORY (full-bleed photo + pull quote) ────────────
+Full-bleed editorial photograph, 100vh on desktop, 60vh on mobile.
+
+- Background image: high-resolution photograph of a Nigerian mother and
+  daughter in a kitchen together — mother stirring a pot, daughter holding
+  a phone showing Lapya. Warm low golden light, slight film grain feel,
+  candid not posed.
+- A Navy gradient on the bottom 40% for text legibility.
+- Over the bottom of the image, in Butter Yellow Fraunces 600 44px, max
+  width 720px:
+    "I stopped throwing the hospital diet sheet away in week one. Lapya
+    just told me what to cook tonight."
+- Below in Periwinkle Inter 14px:
+    "Bola, 28 — Caregiver. Her mother Mrs. Eze has diabetes and stage 2
+    hypertension. They've been using Lapya for 4 weeks."
+- Small "Read Bola's story →" link in Marigold uppercase 11px
+
+(This story can be a real beta tester quote, or a representative composite
+if you label it as such at the bottom of the page.)
+
+──────────── 7. PRICING (warm white, editorial table) ────────────
+Don't make this look like every SaaS pricing page.
+
+- Eyebrow Cobalt uppercase "CHAPTER 03 — PRICING"
+- Display headline in Fraunces 600, 48px, Navy, max-width 600px:
+    "Less than a streaming subscription. More than a hospital diet sheet."
+- Below in body 16px secondary: "Lapya is free to try. Premium is ₦1,500
+  a month. About the price of a Spotify subscription. Less than half the
+  cost of one private dietitian visit."
+
+- Pricing presented NOT as 3 stacked cards but as a horizontal editorial
+  comparison table:
+  - 4 columns: FREE / CARE / FAMILY / PRO (dietitians)
+  - Each column has a tier name in Sora 700 18px, a price in Fraunces 600
+    32px, and a list of inclusions in 14px with small Cobalt checks
+  - The CARE column has a thin Marigold border on the left edge and a tiny
+    Marigold pill above it saying "MOST CHOSEN" — no big "RECOMMENDED"
+    sticker
+  - At the bottom of each column, a small Cobalt text link "Choose [tier]"
+    rather than a big button (the editorial restraint)
+  - Below the table, a single primary Cobalt button "Start free — no card
+    required"
+
+──────────── 8. FOR DIETITIANS (Navy section) ────────────
+This section earns Lapya the dietitian-PLG distribution.
+
+- Full Navy bg
+- Eyebrow Butter Yellow uppercase "FOR PRACTITIONERS"
+- Display headline in Fraunces 600 56px Butter Yellow:
+    "If you treat Nigerians, you should know about us."
+- Subhead in Periwinkle Inter 18px max-width 600px:
+    "Lapya gives registered dietitians a clinical AI co-pilot. Manage 30
+    patients in the time you used to manage 5. Keep 70% of subscription
+    revenue from patients you refer."
+- Three stat callouts in a row, smaller this time, Periwinkle background
+  cards:
+  - "30+" Patients per dietitian
+  - "70%" Revenue share to you
+  - "₦8,000/mo" Pro account price
+- A single Marigold pill button: "Apply for the dietitian pilot →"
+- Below in 12px Periwinkle: "We're onboarding 50 dietitians by July 2026."
+
+──────────── 9. PRESS / RECOGNITION (warm white thin strip) ────────────
+- Eyebrow "RECOGNITION" centered
+- Below, a single horizontal row of small grayscale logos with a 70%
+  opacity treatment:
+  Technovation Girls 2026 · TechCabal · Disrupt Africa · [Add more as
+  earned]
+- Caption below: "Featured 2026."
+- If you don't have press yet, label this section "Where we're showing
+  up" with: "Technovation Girls AI Accelerator 2026 finalist · Demo Day
+  August 2026" only.
+
+──────────── 10. FAQ (warm white, editorial accordion) ────────────
+Don't use a generic accordion. Make it feel like a Q&A column in a
+magazine.
+
+- Eyebrow Cobalt "FREQUENTLY ASKED"
+- Headline Fraunces 600 40px Navy: "Questions, answered."
+- Below, a 2-column layout on desktop (1 column on mobile) where each
+  question is in Sora 700 18px Navy with a thin Marigold horizontal rule
+  above, and the answer in Inter 16px secondary below.
+
+Questions to include:
+1. "Is Lapya a replacement for my doctor or dietitian?"
+   "No. Lapya is a daily companion that helps you act on the advice you've
+   been given. We work alongside your healthcare team — and we make it
+   easy to invite your dietitian directly into the app."
+2. "What if I have more than one condition?"
+   "That's exactly why we built Lapya. Diabetes + hypertension + kidney
+   disease often need conflicting diets. Our AI resolves the conflicts
+   using clinical priority rules reviewed by Nigerian dietitians."
+3. "Will it work for foods my grandmother cooks?"
+   "Yes. We started with the 100 most-cooked Nigerian dishes — egusi, eba,
+   jollof, ofada, tuwo, akara, and more. Ghana, Kenya, and South Africa
+   follow this year."
+4. "Do I need a smartphone with great internet?"
+   "A basic Android phone with occasional WiFi or 4G is enough. Lapya
+   works offline after your first plan loads."
+5. "What about my privacy?"
+   "Your health data is encrypted and stored on Nigerian servers. We will
+   never sell or share it. NDPR-compliant by design."
+6. "How much is it?"
+   "Free to try forever. ₦1,500 a month for unlimited. ₦3,500 a month for
+   the whole family. About the price of a streaming subscription."
+
+──────────── 11. CLOSING CTA (full-bleed Navy) ────────────
+This is the page closer. Make it feel like a final magazine spread.
+
+- Background: Blueberry Navy with a subtle high-resolution photograph of
+  fresh blueberries scattered on a Periwinkle linen background as a
+  low-opacity (20%) texture
+- Center-left aligned, max-width 880px:
+  - Tiny Marigold eyebrow: "ONE LAST THING"
+  - Massive headline Fraunces 600 72px Butter Yellow:
+      "There is a way to eat well in Nigeria — even with everything."
+  - Body Inter 18px Periwinkle:
+      "Start your free plan in 3 minutes. No card needed."
+  - Two CTAs:
+    - Primary big Cobalt button "Start your free meal plan"
+    - Secondary text link with arrow: "Or invite your mother / father /
+      patient instead →"
+
+──────────── 12. FOOTER (Navy) ────────────
+Editorial, not corporate. 4 columns on desktop, stacked on mobile.
+
+Column 1 — Brand:
+- Lapya logo (blueberry-LP mark) + wordmark
+- Tagline below in Periwinkle 14px:
+  "Eat well, even with everything."
+- Two small social icons: Instagram + Twitter/X + LinkedIn, in Butter
+  Yellow
+
+Column 2 — Product:
+- How it works · For patients · For caregivers · For dietitians · Pricing
+  · Download the app
+
+Column 3 — Company:
+- About Lapya · Our science · Press · Careers · Contact
+
+Column 4 — Stay close:
+- Email input "Get the monthly Lapya letter" with a Cobalt arrow submit
+- Below in Periwinkle 12px:
+  "One email a month. Real stories. No spam. Promise."
+
+Bottom thin row:
+- Copyright "© 2026 Lapya Health Limited · Lagos, Nigeria" in 12px
+  Periwinkle
+- Right side: small links "Privacy · Terms · NDPR"
+
+═══════════════════════════════════════════════════════════════
+ANTI-VIBECODED CHECKLIST — verify before delivering
+═══════════════════════════════════════════════════════════════
+
+The final design must pass ALL of these:
+
+☐ No gradient blobs anywhere
+☐ No three-icon-card feature row
+☐ No centered single-button hero
+☐ At least 3 instances of intentional asymmetry
+☐ At least 2 magazine-style eyebrow labels ("CHAPTER 01 —")
+☐ At least 1 full-bleed editorial photograph with a pull quote
+☐ At least 1 oversized Fraunces serif display headline (60px+)
+☐ Pricing is a horizontal table, not stacked cards
+☐ FAQ is editorial Q&A column, not generic accordion
+☐ All photography is HIGH-RESOLUTION editorial (1500px+ source), real
+  Nigerian subjects and food, no AI artifacts, no stock-photo feel
+☐ Marigold is used as accent in MAX 5 places on the page (we earn it)
+☐ Body text and headlines have at least 3 distinct size jumps per
+  section
+☐ Navy and warm-white sections alternate — never 2 white sections back
+  to back
+☐ Real Nigerian names and real cited stats throughout
+
+═══════════════════════════════════════════════════════════════
+DELIVERY
+═══════════════════════════════════════════════════════════════
+
+1. Deliver one full-length desktop page at 1440px wide
+2. Deliver the same page at 768px tablet
+3. Deliver the same page at 390px mobile
+4. Label every section with a small note "Section X — [Name]" in the
+   Figma file
+5. Generate placeholder photography prompts for each image slot so a
+   real photographer or stock search can fulfill them later — list these
+   in a side panel of the Figma file
+
+Confirm you understand. Then deliver.

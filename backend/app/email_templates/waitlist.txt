@@ -1,0 +1,11 @@
+You're on the Lapya waitlist
+
+Thanks for signing up — we'll be in touch the moment Lapya is ready for
+{{ role | lower }}s like you.
+
+Lapya is a Nigerian therapeutic-diet app for people living with multiple
+chronic conditions. We'd love your feedback when we launch.
+
+In the meantime, follow along at https://lapya.test (placeholder).
+
+— The Lapya team

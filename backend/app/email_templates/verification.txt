@@ -1,0 +1,13 @@
+Verify your Lapya email
+
+Hi {{ first_name }},
+
+Your verification code is:
+
+  {{ otp }}
+
+Enter it in the app within the next 30 minutes to confirm your email.
+
+If you didn't sign up for Lapya, you can safely ignore this message.
+
+— The Lapya team

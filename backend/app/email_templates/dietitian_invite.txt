@@ -1,0 +1,15 @@
+Dr. {{ dietitian_name }} invited you to share your Lapya plan
+
+Hi,
+
+Dr. {{ dietitian_name }} would like to view and tailor your Lapya meal
+plan. Dietitians can swap dishes, leave notes, and check in on how you're
+doing — nothing else.
+
+To accept, sign in (or sign up) and open this link:
+
+  {{ accept_url }}
+
+You can revoke access at any time from your Care Circle.
+
+— The Lapya team

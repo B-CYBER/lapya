@@ -1,0 +1,226 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Lapya Blueberry Palette */
+  --blueberry-navy: #1E2A5E;
+  --blueberry-cobalt: #3D6BE5;
+  --periwinkle: #A8BCF0;
+  --marigold: #E8A92E;
+  --butter-yellow: #F4D27A;
+
+  /* Neutrals */
+  --warm-white: #FBFAF7;
+  --surface-white: #FFFFFF;
+  --text-primary: #1A2244;
+  --text-secondary: #5E6680;
+  --text-on-navy: #F4F1EA;
+  --border-color: #E7E4DD;
+
+  /* State Colors (subtle) */
+  --success-sage: #6E9A6E;
+  --warning-amber: #C9892E;
+  --danger-clay: #B4533A;
+
+  /* Mapped to standard theme variables */
+  --font-size: 16px;
+  --background: #FBFAF7;
+  --foreground: #1A2244;
+  --card: #FFFFFF;
+  --card-foreground: #1A2244;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A2244;
+  --primary: #3D6BE5;
+  --primary-foreground: #FFFFFF;
+  --secondary: #A8BCF0;
+  --secondary-foreground: #1E2A5E;
+  --muted: #E7E4DD;
+  --muted-foreground: #5E6680;
+  --accent: #E8A92E;
+  --accent-foreground: #1E2A5E;
+  --destructive: #B4533A;
+  --destructive-foreground: #FFFFFF;
+  --border: #E7E4DD;
+  --input: transparent;
+  --input-background: #FFFFFF;
+  --switch-background: #A8BCF0;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #3D6BE5;
+
+  /* Typography Sizes */
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1rem;     /* 16px */
+  --text-lg: 1.25rem;    /* 20px */
+  --text-xl: 1.5rem;     /* 24px */
+  --text-2xl: 2rem;      /* 32px */
+  --text-3xl: 2.5rem;    /* 40px */
+
+  /* Radius */
+  --radius: 1.25rem;     /* 20px */
+  --radius-sm: 0.875rem; /* 14px */
+  --radius-md: 1rem;     /* 16px */
+  --radius-lg: 1.25rem;  /* 20px */
+  --radius-xl: 1.75rem;  /* 28px */
+
+  /* Spacing (8px base) */
+  --spacing-1: 0.25rem;  /* 4px */
+  --spacing-2: 0.5rem;   /* 8px */
+  --spacing-3: 1rem;     /* 16px */
+  --spacing-4: 1.5rem;   /* 24px */
+  --spacing-5: 2rem;     /* 32px */
+  --spacing-6: 3rem;     /* 48px */
+  --spacing-7: 4rem;     /* 64px */
+
+  /* Font Families */
+  --font-display: 'Fraunces', serif;
+  --font-heading: 'Sora', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Shadows */
+  --shadow-navy: 0 4px 16px rgba(30, 42, 94, 0.08);
+  --shadow-soft: 0 2px 8px rgba(30, 42, 94, 0.06);
+}
+
+.dark {
+  --background: #1E2A5E;
+  --foreground: #F4F1EA;
+  --card: #1E2A5E;
+  --card-foreground: #F4F1EA;
+  --popover: #1E2A5E;
+  --popover-foreground: #F4F1EA;
+  --primary: #3D6BE5;
+  --primary-foreground: #FFFFFF;
+  --secondary: #A8BCF0;
+  --secondary-foreground: #1E2A5E;
+  --muted: #5E6680;
+  --muted-foreground: #A8BCF0;
+  --accent: #E8A92E;
+  --accent-foreground: #1E2A5E;
+  --destructive: #B4533A;
+  --destructive-foreground: #FFFFFF;
+  --border: #5E6680;
+  --input: #1E2A5E;
+  --ring: #3D6BE5;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+
+  /* Lapya Custom Colors */
+  --color-blueberry-navy: var(--blueberry-navy);
+  --color-blueberry-cobalt: var(--blueberry-cobalt);
+  --color-periwinkle: var(--periwinkle);
+  --color-marigold: var(--marigold);
+  --color-butter-yellow: var(--butter-yellow);
+  --color-warm-white: var(--warm-white);
+  --color-surface-white: var(--surface-white);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-on-navy: var(--text-on-navy);
+  --color-border-color: var(--border-color);
+  --color-success-sage: var(--success-sage);
+  --color-warning-amber: var(--warning-amber);
+  --color-danger-clay: var(--danger-clay);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  /**
+  * Lapya Typography Hierarchy
+  * Display headings use Fraunces serif for premium editorial feel
+  * Headings use Sora for modern boldness
+  * Body uses Inter for readability
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text-primary);
+  }
+
+  h2 {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--text-primary);
+  }
+
+  h3 {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--text-primary);
+  }
+
+  h4 {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--text-primary);
+  }
+
+  p {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  label {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  button {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  input, textarea, select {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}

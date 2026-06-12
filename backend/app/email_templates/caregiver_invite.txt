@@ -1,0 +1,15 @@
+{{ inviter_name }} added you to their Lapya care circle
+
+Hi,
+
+{{ inviter_name }} ({{ relationship | lower }}) invited you to view their
+Lapya meal plan and help them eat well.
+
+To accept, sign in (or sign up) and open this link:
+
+  {{ accept_url }}
+
+You'll be able to see today's meals, the grocery list and recent health
+metrics — nothing else.
+
+— The Lapya team

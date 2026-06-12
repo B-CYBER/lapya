@@ -1,0 +1,10 @@
+{
+  "name": "lapya",
+  "private": true,
+  "engines": {
+    "node": "20.x"
+  },
+  "scripts": {
+    "heroku-postbuild": "cd frontend && npx -y yarn@1.22.22 install --frozen-lockfile && npx -y yarn@1.22.22 build && rm -rf node_modules"
+  }
+}

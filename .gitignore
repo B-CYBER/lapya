@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Mailpit dev SMTP catcher binary (downloaded on demand)
+backend/tools/mailpit
+backend/tools/LICENSE
+backend/venv/
+backend/.venv/
+backend/lapya.db
+backend/lapya.db-journal
+backend/lapya.db-wal
+backend/lapya.db-shm
+
+# Node
+node_modules/
+dist/
+build/
+.vite/
+
+# Nigerian corpus — keep the small xlsx (source for the recipe importer),
+# ignore the bulky raw download, source photos, and unparsed .docx guides.
+# The shipped/compressed photos live in backend/static/recipe-images/ (tracked).
+drive-download-*.zip
+Nutrition Database*.zip
+data/nigerian_corpus/food_images/
+data/nigerian_corpus/*.docx
+# Raw duplicate of the corpus download — pipeline reads data/nigerian_corpus/
+nigeria_centric_knowledge_base/
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+*.swp
+*.swo
