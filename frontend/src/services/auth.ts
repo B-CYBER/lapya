@@ -38,6 +38,12 @@ export function verifyEmail(otp: string): Promise<User> {
   });
 }
 
+export function resendVerification(): Promise<{ message: string }> {
+  return apiFetch<{ message: string }>("/api/auth/resend-verification", {
+    method: "POST",
+  });
+}
+
 export function forgotPassword(email: string): Promise<{ message: string }> {
   return apiFetch<{ message: string }>("/api/auth/forgot-password", {
     method: "POST",
