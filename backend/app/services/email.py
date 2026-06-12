@@ -58,6 +58,14 @@ async def send_email_template(to: str, template_name: str, context: dict[str, An
     msg["Subject"] = subject
     msg.set_content(text_body)
 
+    # TLS mode follows the port convention: 465 = implicit TLS, 587 = STARTTLS
+    # upgrade, anything else (Mailpit on 1025, plain relays on 25) = no TLS.
+    tls_kwargs: dict[str, bool] = {"start_tls": False}
+    if settings.smtp_port == 465:
+        tls_kwargs = {"use_tls": True}
+    elif settings.smtp_port == 587:
+        tls_kwargs = {"start_tls": True}
+
     try:
         await aiosmtplib.send(
             msg,
@@ -65,7 +73,7 @@ async def send_email_template(to: str, template_name: str, context: dict[str, An
             port=settings.smtp_port,
             username=settings.smtp_user or None,
             password=settings.smtp_password or None,
-            start_tls=False,
+            **tls_kwargs,
         )
     except Exception as exc:  # noqa: BLE001
         logger.error(
